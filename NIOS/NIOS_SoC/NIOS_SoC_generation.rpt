@@ -1,0 +1,145 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /hdd/Embebidos/Disenho-de-SoC-para-reloj-despertador/NIOS/NIOS_SoC.qsys --block-symbol-file --output-directory=/hdd/Embebidos/Disenho-de-SoC-para-reloj-despertador/NIOS/NIOS_SoC --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading NIOS/NIOS_SoC.qsys
+Progress: Reading input file
+Progress: Adding NIOS [altera_nios2_gen2 18.1]
+Progress: Parameterizing module NIOS
+Progress: Adding Segment0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment0
+Progress: Adding Segment1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment1
+Progress: Adding Segment2 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment2
+Progress: Adding Segment3 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment3
+Progress: Adding Segment4 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment4
+Progress: Adding Segment5 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment5
+Progress: Adding Timer [altera_avalon_timer 18.1]
+Progress: Parameterizing module Timer
+Progress: Adding UART [altera_avalon_uart 18.1]
+Progress: Parameterizing module UART
+Progress: Adding button [altera_avalon_pio 18.1]
+Progress: Parameterizing module button
+Progress: Adding clk [clock_source 18.1]
+Progress: Parameterizing module clk
+Progress: Adding memory [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module memory
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: NIOS_SoC.button: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /hdd/Embebidos/Disenho-de-SoC-para-reloj-despertador/NIOS/NIOS_SoC.qsys --synthesis=VERILOG --output-directory=/hdd/Embebidos/Disenho-de-SoC-para-reloj-despertador/NIOS/NIOS_SoC/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading NIOS/NIOS_SoC.qsys
+Progress: Reading input file
+Progress: Adding NIOS [altera_nios2_gen2 18.1]
+Progress: Parameterizing module NIOS
+Progress: Adding Segment0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment0
+Progress: Adding Segment1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment1
+Progress: Adding Segment2 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment2
+Progress: Adding Segment3 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment3
+Progress: Adding Segment4 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment4
+Progress: Adding Segment5 [altera_avalon_pio 18.1]
+Progress: Parameterizing module Segment5
+Progress: Adding Timer [altera_avalon_timer 18.1]
+Progress: Parameterizing module Timer
+Progress: Adding UART [altera_avalon_uart 18.1]
+Progress: Parameterizing module UART
+Progress: Adding button [altera_avalon_pio 18.1]
+Progress: Parameterizing module button
+Progress: Adding clk [clock_source 18.1]
+Progress: Parameterizing module clk
+Progress: Adding memory [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module memory
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: NIOS_SoC.button: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NIOS_SoC: Generating NIOS_SoC "NIOS_SoC" for QUARTUS_SYNTH
+Info: NIOS: "NIOS_SoC" instantiated altera_nios2_gen2 "NIOS"
+Info: Segment0: Starting RTL generation for module 'NIOS_SoC_Segment0'
+Info: Segment0:   Generation command is [exec /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOS_SoC_Segment0 --dir=/tmp/alt8183_528829577007664948.dir/0002_Segment0_gen/ --quartus_dir=/home/erick/opt/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8183_528829577007664948.dir/0002_Segment0_gen//NIOS_SoC_Segment0_component_configuration.pl  --do_build_sim=0  ]
+Info: Segment0: Done RTL generation for module 'NIOS_SoC_Segment0'
+Info: Segment0: "NIOS_SoC" instantiated altera_avalon_pio "Segment0"
+Info: Timer: Starting RTL generation for module 'NIOS_SoC_Timer'
+Info: Timer:   Generation command is [exec /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64//perl/bin/perl -I /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=NIOS_SoC_Timer --dir=/tmp/alt8183_528829577007664948.dir/0003_Timer_gen/ --quartus_dir=/home/erick/opt/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8183_528829577007664948.dir/0003_Timer_gen//NIOS_SoC_Timer_component_configuration.pl  --do_build_sim=0  ]
+Info: Timer: Done RTL generation for module 'NIOS_SoC_Timer'
+Info: Timer: "NIOS_SoC" instantiated altera_avalon_timer "Timer"
+Info: UART: Starting RTL generation for module 'NIOS_SoC_UART'
+Info: UART:   Generation command is [exec /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart -- /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart/generate_rtl.pl --name=NIOS_SoC_UART --dir=/tmp/alt8183_528829577007664948.dir/0004_UART_gen/ --quartus_dir=/home/erick/opt/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8183_528829577007664948.dir/0004_UART_gen//NIOS_SoC_UART_component_configuration.pl  --do_build_sim=0  ]
+Info: UART: Done RTL generation for module 'NIOS_SoC_UART'
+Info: UART: "NIOS_SoC" instantiated altera_avalon_uart "UART"
+Info: button: Starting RTL generation for module 'NIOS_SoC_button'
+Info: button:   Generation command is [exec /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOS_SoC_button --dir=/tmp/alt8183_528829577007664948.dir/0005_button_gen/ --quartus_dir=/home/erick/opt/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8183_528829577007664948.dir/0005_button_gen//NIOS_SoC_button_component_configuration.pl  --do_build_sim=0  ]
+Info: button: Done RTL generation for module 'NIOS_SoC_button'
+Info: button: "NIOS_SoC" instantiated altera_avalon_pio "button"
+Info: memory: Starting RTL generation for module 'NIOS_SoC_memory'
+Info: memory:   Generation command is [exec /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=NIOS_SoC_memory --dir=/tmp/alt8183_528829577007664948.dir/0006_memory_gen/ --quartus_dir=/home/erick/opt/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8183_528829577007664948.dir/0006_memory_gen//NIOS_SoC_memory_component_configuration.pl  --do_build_sim=0  ]
+Info: memory: Done RTL generation for module 'NIOS_SoC_memory'
+Info: memory: "NIOS_SoC" instantiated altera_avalon_onchip_memory2 "memory"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "NIOS_SoC" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "NIOS_SoC" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "NIOS_SoC" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'NIOS_SoC_NIOS_cpu'
+Info: cpu:   Generation command is [exec /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64//eperlcmd -I /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/erick/opt/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=NIOS_SoC_NIOS_cpu --dir=/tmp/alt8183_528829577007664948.dir/0009_cpu_gen/ --quartus_bindir=/home/erick/opt/intelFPGA_lite/18.1/quartus/linux64/ --verilog --config=/tmp/alt8183_528829577007664948.dir/0009_cpu_gen//NIOS_SoC_NIOS_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2019.10.13 19:03:21 (*) Starting Nios II generation
+Info: cpu: # 2019.10.13 19:03:21 (*)   Checking for plaintext license.
+Info: cpu: # 2019.10.13 19:03:22 (*)   Couldn't query license setup in Quartus directory /home/erick/opt/intelFPGA_lite/18.1/quartus/linux64/
+Info: cpu: # 2019.10.13 19:03:22 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2019.10.13 19:03:22 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2019.10.13 19:03:22 (*)   Plaintext license not found.
+Info: cpu: # 2019.10.13 19:03:22 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2019.10.13 19:03:22 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2019.10.13 19:03:22 (*)   Creating all objects for CPU
+Info: cpu: # 2019.10.13 19:03:23 (*)   Generating RTL from CPU objects
+Info: cpu: # 2019.10.13 19:03:23 (*)   Creating plain-text RTL
+Info: cpu: # 2019.10.13 19:03:24 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'NIOS_SoC_NIOS_cpu'
+Info: cpu: "NIOS" instantiated altera_nios2_gen2_unit "cpu"
+Info: NIOS_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "NIOS_data_master_translator"
+Info: NIOS_debug_mem_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "NIOS_debug_mem_slave_translator"
+Info: NIOS_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "NIOS_data_master_agent"
+Info: NIOS_debug_mem_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "NIOS_debug_mem_slave_agent"
+Info: NIOS_debug_mem_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "NIOS_debug_mem_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file /hdd/Embebidos/Disenho-de-SoC-para-reloj-despertador/NIOS/NIOS_SoC/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /hdd/Embebidos/Disenho-de-SoC-para-reloj-despertador/NIOS/NIOS_SoC/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file /hdd/Embebidos/Disenho-de-SoC-para-reloj-despertador/NIOS/NIOS_SoC/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: NIOS_SoC: Done "NIOS_SoC" with 29 modules, 42 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
