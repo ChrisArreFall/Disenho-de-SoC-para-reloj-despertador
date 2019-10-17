@@ -1,0 +1,21 @@
+03:41:02 **** Incremental Build of configuration Nios II for project Alarm_SoC ****
+make all 
+Info: Building ../Alarm_SoC_bsp/
+make --no-print-directory -C ../Alarm_SoC_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Alarm_SoC_bsp//HAL/inc -I../Alarm_SoC_bsp/ -I../Alarm_SoC_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+Info: Linking Alarm_SoC.elf
+nios2-elf-g++  -T'../Alarm_SoC_bsp//linker.x' -msys-crt0='../Alarm_SoC_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Alarm_SoC_bsp/  -msmallc  -Wl,-Map=Alarm_SoC.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Alarm_SoC.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert Alarm_SoC.elf --thread_model hal --cpu_name CPU --qsys true --simulation_enabled false --id 0 --sidp 0x490c0 --timestamp 1571282238 --stderr_dev JTAG --stdin_dev JTAG --stdout_dev JTAG --sopc_system_name alarm --quartus_project_dir "/home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm" --jdi ../..//output_files/Alarm_SoC.jdi --sopcinfo /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC_bsp/../../alarm.sopcinfo
+Info: (Alarm_SoC.elf) 6772 Bytes program size (code + initialized data).
+Info:                 31 KBytes free for stack + heap.
+Info: Creating Alarm_SoC.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Alarm_SoC.elf >Alarm_SoC.objdump
+[Alarm_SoC build complete]
+03:41:14 **** Incremental Build of configuration Nios II for project Alarm_SoC ****
+make all 
+Info: Building ../Alarm_SoC_bsp/
+make --no-print-directory -C ../Alarm_SoC_bsp/
+[BSP build complete]
+[Alarm_SoC build complete]

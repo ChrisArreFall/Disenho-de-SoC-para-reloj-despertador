@@ -1,9 +1,0 @@
-20:11:21 **** Build of configuration Nios II for project Alarma ****
-make all 
-Info: Building ../Alarma_bsp/
-make --no-print-directory -C ../Alarma_bsp/
-[BSP build complete]
-[Alarma build complete]
-
-20:11:22 Build Finished (took 749ms)
-

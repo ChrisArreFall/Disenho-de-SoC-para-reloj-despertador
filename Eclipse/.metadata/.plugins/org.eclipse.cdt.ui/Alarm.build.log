@@ -1,0 +1,15 @@
+23:16:20 **** Incremental Build of configuration Nios II for project Alarm ****
+make all 
+Info: Building ../Alarm_bsp/
+make --no-print-directory -C ../Alarm_bsp/
+[BSP build complete]
+Info: Linking Alarm.elf
+nios2-elf-g++  -T'../Alarm_bsp//linker.x' -msys-crt0='../Alarm_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Alarm_bsp/  -msmallc  -Wl,-Map=Alarm.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Alarm.elf obj/default/hello_world_small.o -lm -msys-lib=m
+obj/default/hello_world_small.o: In function `SetupTimerCore':
+/home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm/hello_world_small.c:184: undefined reference to `alt_ic_isr_register'
+Makefile:1064: recipe for target 'Alarm.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [Alarm.elf] Error 1
+
+23:16:20 Build Finished (took 627ms)
+

@@ -1,0 +1,337 @@
+!SESSION 2019-10-16 21:48:23.275 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/chris/intelFPGA_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/chris/intelFPGA_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2019-10-16 21:50:41.263
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-16 21:52:23.426
+!MESSAGE Indexed 'Alarm_bsp' (84 sources, 88 headers) in 3.84 sec: 1,748 declarations; 3,870 references; 95 unresolved inclusions; 4 syntax errors; 171 unresolved names (3%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-16 21:52:28.285
+!MESSAGE Indexed 'Alarm' (1 sources, 0 headers) in 0.006 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 21:57:36.235
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 21:57:38.893
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-6]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=0x490c0] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 21:57:38.972
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm/Alarm.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 21:57:41.628
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-6]', --device=2, --instance=0, --go, --accept-bad-sysid, --sidp=0x490c0, /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm/Alarm.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 21:57:41.631
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 21:57:57.092
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 21:57:58.761
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm/Alarm.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-16 23:18:50.125
+!MESSAGE Indexed 'Alarm_SoC_bsp' (84 sources, 71 headers) in 1.06 sec: 1,291 declarations; 2,850 references; 117 unresolved inclusions; 6 syntax errors; 193 unresolved names (4.5%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-16 23:18:53.368
+!MESSAGE Indexed 'Alarm_SoC' (1 sources, 0 headers) in 0.006 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 23:54:41.275
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:54:42.970
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-6]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=0x490c0] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 23:54:43.202
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:54:44.890
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-6]', --device=2, --instance=0, --go, --accept-bad-sysid, --sidp=0x490c0, --reset-target, /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:54:44.892
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 23:54:57.740
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:54:59.403
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-6]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=0x490c0] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 23:54:59.631
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 23:54:59.777
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 23:55:00.289
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:55:01.277
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-6]', --device=2, --instance=0, --go, --accept-bad-sysid, --sidp=0x490c0, --reset-target, /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:55:01.278
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:55:01.919
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-6]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=0x490c0] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 23:55:02.134
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:55:03.786
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-6]', --device=2, --instance=0, --go, --accept-bad-sysid, --sidp=0x490c0, --reset-target, /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:55:03.788
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 23:56:30.203
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:56:31.861
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-6]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=0x490c0] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 23:56:32.070
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:56:33.740
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-6]', --device=2, --instance=0, --go, --accept-bad-sysid, --sidp=0x490c0, --reset-target, /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-16 23:56:33.742
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 23:57:05.750
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-16 23:57:07.669
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+!SESSION 2019-10-17 00:04:45.346 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/chris/intelFPGA_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/chris/intelFPGA_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-10-17 00:04:53.329
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2019-10-17 00:05:10.391
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:06:16.711
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:06:18.398
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:08:40.189
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:08:40.994
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:08:42.672
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:10:32.332
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:10:33.837
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:10:35.553
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:12:53.307
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:12:53.503
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:12:55.173
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:13:28.135
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-6]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:13:28.332
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:13:30.032
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:14:08.744
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:14:10.422
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:15:33.598
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:15:35.261
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:15:51.974
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:15:53.668
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:19:06.677
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:19:08.356
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:20:01.710
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:20:03.400
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:22:42.137
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 00:22:43.827
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 02:26:59.853
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-10-17 02:27:02.588
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-6]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=0x490c0] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 02:27:02.745
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 02:34:57.534
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 02:34:59.203
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 02:59:36.809
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 02:59:39.042
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:03:36.578
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:03:38.305
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:07:49.006
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:07:50.719
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:11:05.805
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:11:07.518
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:13:07.424
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:13:09.128
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:22:59.586
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:23:01.396
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY org.eclipse.cdt.ui 4 0 2019-10-17 03:28:31.385
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element hello_world_small.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:484)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:573)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:362)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:349)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2019-10-17 03:28:31.395
+!MESSAGE Element hello_world_small.c does not exist.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:29:39.147
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:29:40.848
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:29:57.337
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:29:59.044
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:31:19.404
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:31:21.101
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:39:07.933
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:39:09.635
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:41:15.820
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x490c0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-10-17 03:41:17.508
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-6]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x490c0 --reset-target /home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC/Alarm_SoC.elf]

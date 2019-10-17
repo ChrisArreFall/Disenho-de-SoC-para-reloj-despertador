@@ -1,0 +1,285 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "alarm_export",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[8]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[9]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[10]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[11]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[12]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[13]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[14]",
+					"strict" : false
+				},
+				{
+					"name" : "hours_export[15]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[8]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_export[9]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[8]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[9]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[10]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[11]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[12]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[13]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[14]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes_export[15]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[8]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[9]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[10]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[11]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[12]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[13]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[14]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds_export[15]",
+					"strict" : false
+				},
+				{
+					"name" : "uart_TXD",
+					"strict" : false
+				},
+				{
+					"name" : "clk_clk",
+					"strict" : false
+				},
+				{
+					"name" : "switches_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "buttons_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "buttons_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "switches_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "buttons_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "buttons_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reset_reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "uart_RXD",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
