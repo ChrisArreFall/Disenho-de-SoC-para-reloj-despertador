@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 16, 2019 11:18:47 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1571289527934</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Oct 17, 2019 4:46:55 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1571309215247</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/chris/Documents/Embebidos/Disenho-de-SoC-para-reloj-despertador/Alarm/software/Alarm_SoC_bsp</BspGeneratedLocation>
         <BspSettingsFile>./settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../alarm.sopcinfo</SopcDesignFile>
@@ -917,31 +917,31 @@
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>SWITCHES</slaveDescriptor>
+                <slaveDescriptor>alarm</slaveDescriptor>
                 <addressRange>0x00049040 - 0x0004904F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>HOURS</slaveDescriptor>
+                <slaveDescriptor>SWITCHES</slaveDescriptor>
                 <addressRange>0x00049050 - 0x0004905F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>MINUTES</slaveDescriptor>
+                <slaveDescriptor>HOURS</slaveDescriptor>
                 <addressRange>0x00049060 - 0x0004906F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>SECONDS</slaveDescriptor>
+                <slaveDescriptor>MINUTES</slaveDescriptor>
                 <addressRange>0x00049070 - 0x0004907F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>GPIO</slaveDescriptor>
+                <slaveDescriptor>SECONDS</slaveDescriptor>
                 <addressRange>0x00049080 - 0x0004908F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>

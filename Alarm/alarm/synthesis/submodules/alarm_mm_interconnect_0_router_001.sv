@@ -47,7 +47,7 @@ module alarm_mm_interconnect_0_router_001_default_decode
      parameter DEFAULT_CHANNEL = 3,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 8 
+               DEFAULT_DESTID = 7 
    )
   (output [83 - 80 : 0] default_destination_id,
    output [14-1 : 0] default_wr_channel,
@@ -200,7 +200,7 @@ module alarm_mm_interconnect_0_router_001
     // ( 0x20000 .. 0x40000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h20000   ) begin
             src_channel = 14'b01000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 8;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
     end
 
     // ( 0x48800 .. 0x49000 )
@@ -212,19 +212,19 @@ module alarm_mm_interconnect_0_router_001
     // ( 0x49020 .. 0x49040 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 19'h49020   ) begin
             src_channel = 14'b10000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 12;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 11;
     end
 
     // ( 0x490c0 .. 0x490c8 )
     if ( {address[RG:PAD3],{PAD3{1'b0}}} == 19'h490c0  && read_transaction  ) begin
             src_channel = 14'b00010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 11;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
     end
 
     // ( 0x490d0 .. 0x490d8 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 19'h490d0   ) begin
             src_channel = 14'b00001;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
 end

@@ -47,7 +47,7 @@ module alarm_mm_interconnect_0_router_default_decode
      parameter DEFAULT_CHANNEL = 5,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 8 
+               DEFAULT_DESTID = 7 
    )
   (output [83 - 80 : 0] default_destination_id,
    output [14-1 : 0] default_wr_channel,
@@ -209,13 +209,13 @@ module alarm_mm_interconnect_0_router
     // ( 0x20000 .. 0x40000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h20000   ) begin
             src_channel = 14'b00000000100000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 8;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
     end
 
     // ( 0x40000 .. 0x48000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h40000   ) begin
             src_channel = 14'b00000000010000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end
 
     // ( 0x48800 .. 0x49000 )
@@ -226,44 +226,44 @@ module alarm_mm_interconnect_0_router
 
     // ( 0x49020 .. 0x49040 )
     if ( {address[RG:PAD3],{PAD3{1'b0}}} == 19'h49020   ) begin
-            src_channel = 14'b01000000000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 12;
+            src_channel = 14'b00100000000000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 11;
     end
 
     // ( 0x49040 .. 0x49050 )
-    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 19'h49040  && read_transaction  ) begin
+    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 19'h49040   ) begin
             src_channel = 14'b10000000000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 13;
     end
 
     // ( 0x49050 .. 0x49060 )
-    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 19'h49050   ) begin
-            src_channel = 14'b00100000000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
+    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 19'h49050  && read_transaction  ) begin
+            src_channel = 14'b01000000000000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
     end
 
     // ( 0x49060 .. 0x49070 )
     if ( {address[RG:PAD6],{PAD6{1'b0}}} == 19'h49060   ) begin
             src_channel = 14'b00010000000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
     // ( 0x49070 .. 0x49080 )
     if ( {address[RG:PAD7],{PAD7{1'b0}}} == 19'h49070   ) begin
             src_channel = 14'b00001000000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x49080 .. 0x49090 )
     if ( {address[RG:PAD8],{PAD8{1'b0}}} == 19'h49080   ) begin
             src_channel = 14'b00000100000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 8;
     end
 
     // ( 0x49090 .. 0x490a0 )
     if ( {address[RG:PAD9],{PAD9{1'b0}}} == 19'h49090   ) begin
             src_channel = 14'b00000010000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
     // ( 0x490a0 .. 0x490b0 )
@@ -275,19 +275,19 @@ module alarm_mm_interconnect_0_router
     // ( 0x490c0 .. 0x490c8 )
     if ( {address[RG:PAD11],{PAD11{1'b0}}} == 19'h490c0  && read_transaction  ) begin
             src_channel = 14'b00000000000100;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 11;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
     end
 
     // ( 0x490c8 .. 0x490d0 )
     if ( {address[RG:PAD12],{PAD12{1'b0}}} == 19'h490c8   ) begin
             src_channel = 14'b00000000000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 13;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 12;
     end
 
     // ( 0x490d0 .. 0x490d8 )
     if ( {address[RG:PAD13],{PAD13{1'b0}}} == 19'h490d0   ) begin
             src_channel = 14'b00000000000001;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
 end

@@ -75,11 +75,6 @@ module alarm (
 	wire   [1:0] mm_interconnect_0_leds_s1_address;                    // mm_interconnect_0:LEDs_s1_address -> LEDs:address
 	wire         mm_interconnect_0_leds_s1_write;                      // mm_interconnect_0:LEDs_s1_write -> LEDs:write_n
 	wire  [31:0] mm_interconnect_0_leds_s1_writedata;                  // mm_interconnect_0:LEDs_s1_writedata -> LEDs:writedata
-	wire         mm_interconnect_0_gpio_s1_chipselect;                 // mm_interconnect_0:GPIO_s1_chipselect -> GPIO:chipselect
-	wire  [31:0] mm_interconnect_0_gpio_s1_readdata;                   // GPIO:readdata -> mm_interconnect_0:GPIO_s1_readdata
-	wire   [1:0] mm_interconnect_0_gpio_s1_address;                    // mm_interconnect_0:GPIO_s1_address -> GPIO:address
-	wire         mm_interconnect_0_gpio_s1_write;                      // mm_interconnect_0:GPIO_s1_write -> GPIO:write_n
-	wire  [31:0] mm_interconnect_0_gpio_s1_writedata;                  // mm_interconnect_0:GPIO_s1_writedata -> GPIO:writedata
 	wire         mm_interconnect_0_seconds_s1_chipselect;              // mm_interconnect_0:SECONDS_s1_chipselect -> SECONDS:chipselect
 	wire  [31:0] mm_interconnect_0_seconds_s1_readdata;                // SECONDS:readdata -> mm_interconnect_0:SECONDS_s1_readdata
 	wire   [1:0] mm_interconnect_0_seconds_s1_address;                 // mm_interconnect_0:SECONDS_s1_address -> SECONDS:address
@@ -102,11 +97,16 @@ module alarm (
 	wire  [15:0] mm_interconnect_0_timercore_s1_writedata;             // mm_interconnect_0:TimerCore_s1_writedata -> TimerCore:writedata
 	wire  [31:0] mm_interconnect_0_switches_s1_readdata;               // SWITCHES:readdata -> mm_interconnect_0:SWITCHES_s1_readdata
 	wire   [1:0] mm_interconnect_0_switches_s1_address;                // mm_interconnect_0:SWITCHES_s1_address -> SWITCHES:address
+	wire         mm_interconnect_0_alarm_s1_chipselect;                // mm_interconnect_0:alarm_s1_chipselect -> alarm:chipselect
+	wire  [31:0] mm_interconnect_0_alarm_s1_readdata;                  // alarm:readdata -> mm_interconnect_0:alarm_s1_readdata
+	wire   [1:0] mm_interconnect_0_alarm_s1_address;                   // mm_interconnect_0:alarm_s1_address -> alarm:address
+	wire         mm_interconnect_0_alarm_s1_write;                     // mm_interconnect_0:alarm_s1_write -> alarm:write_n
+	wire  [31:0] mm_interconnect_0_alarm_s1_writedata;                 // mm_interconnect_0:alarm_s1_writedata -> alarm:writedata
 	wire         irq_mapper_receiver0_irq;                             // UART:irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                             // JTAG:av_irq -> irq_mapper:receiver1_irq
 	wire         irq_mapper_receiver2_irq;                             // TimerCore:irq -> irq_mapper:receiver2_irq
 	wire  [31:0] cpu_irq_irq;                                          // irq_mapper:sender_irq -> CPU:irq
-	wire         rst_controller_reset_out_reset;                       // rst_controller:reset_out -> [BUTTONS:reset_n, CPU:reset_n, GPIO:reset_n, HOURS:reset_n, JTAG:rst_n, LEDs:reset_n, MINUTES:reset_n, RAM:reset, ROM:reset, SECONDS:reset_n, SWITCHES:reset_n, SysID:reset_n, TimerCore:reset_n, UART:reset, irq_mapper:reset, mm_interconnect_0:CPU_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                       // rst_controller:reset_out -> [BUTTONS:reset_n, CPU:reset_n, HOURS:reset_n, JTAG:rst_n, LEDs:reset_n, MINUTES:reset_n, RAM:reset, ROM:reset, SECONDS:reset_n, SWITCHES:reset_n, SysID:reset_n, TimerCore:reset_n, UART:reset, alarm:reset_n, irq_mapper:reset, mm_interconnect_0:CPU_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
 	wire         rst_controller_reset_out_reset_req;                   // rst_controller:reset_req -> [CPU:reset_req, RAM:reset_req, ROM:reset_req, rst_translator:reset_req_in]
 	wire         cpu_debug_reset_request_reset;                        // CPU:debug_reset_request -> rst_controller:reset_in1
 
@@ -145,17 +145,6 @@ module alarm (
 		.debug_mem_slave_write               (mm_interconnect_0_cpu_debug_mem_slave_write),       //                          .write
 		.debug_mem_slave_writedata           (mm_interconnect_0_cpu_debug_mem_slave_writedata),   //                          .writedata
 		.dummy_ci_port                       ()                                                   // custom_instruction_master.readra
-	);
-
-	alarm_GPIO gpio (
-		.clk        (clk_clk),                              //                 clk.clk
-		.reset_n    (~rst_controller_reset_out_reset),      //               reset.reset_n
-		.address    (mm_interconnect_0_gpio_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_0_gpio_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_0_gpio_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_0_gpio_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_0_gpio_s1_readdata),   //                    .readdata
-		.out_port   (alarm_export)                          // external_connection.export
 	);
 
 	alarm_HOURS hours (
@@ -285,6 +274,17 @@ module alarm (
 		.UART_TXD   (uart_TXD)                                              //                   .export
 	);
 
+	alarm_alarm alarm (
+		.clk        (clk_clk),                               //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),       //               reset.reset_n
+		.address    (mm_interconnect_0_alarm_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_alarm_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_alarm_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_alarm_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_alarm_s1_readdata),   //                    .readdata
+		.out_port   (alarm_export)                           // external_connection.export
+	);
+
 	alarm_mm_interconnect_0 mm_interconnect_0 (
 		.CLK_clk_clk                           (clk_clk),                                              //                         CLK_clk.clk
 		.CPU_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                       // CPU_reset_reset_bridge_in_reset.reset
@@ -300,6 +300,11 @@ module alarm (
 		.CPU_instruction_master_waitrequest    (cpu_instruction_master_waitrequest),                   //                                .waitrequest
 		.CPU_instruction_master_read           (cpu_instruction_master_read),                          //                                .read
 		.CPU_instruction_master_readdata       (cpu_instruction_master_readdata),                      //                                .readdata
+		.alarm_s1_address                      (mm_interconnect_0_alarm_s1_address),                   //                        alarm_s1.address
+		.alarm_s1_write                        (mm_interconnect_0_alarm_s1_write),                     //                                .write
+		.alarm_s1_readdata                     (mm_interconnect_0_alarm_s1_readdata),                  //                                .readdata
+		.alarm_s1_writedata                    (mm_interconnect_0_alarm_s1_writedata),                 //                                .writedata
+		.alarm_s1_chipselect                   (mm_interconnect_0_alarm_s1_chipselect),                //                                .chipselect
 		.BUTTONS_s1_address                    (mm_interconnect_0_buttons_s1_address),                 //                      BUTTONS_s1.address
 		.BUTTONS_s1_readdata                   (mm_interconnect_0_buttons_s1_readdata),                //                                .readdata
 		.CPU_debug_mem_slave_address           (mm_interconnect_0_cpu_debug_mem_slave_address),        //             CPU_debug_mem_slave.address
@@ -310,11 +315,6 @@ module alarm (
 		.CPU_debug_mem_slave_byteenable        (mm_interconnect_0_cpu_debug_mem_slave_byteenable),     //                                .byteenable
 		.CPU_debug_mem_slave_waitrequest       (mm_interconnect_0_cpu_debug_mem_slave_waitrequest),    //                                .waitrequest
 		.CPU_debug_mem_slave_debugaccess       (mm_interconnect_0_cpu_debug_mem_slave_debugaccess),    //                                .debugaccess
-		.GPIO_s1_address                       (mm_interconnect_0_gpio_s1_address),                    //                         GPIO_s1.address
-		.GPIO_s1_write                         (mm_interconnect_0_gpio_s1_write),                      //                                .write
-		.GPIO_s1_readdata                      (mm_interconnect_0_gpio_s1_readdata),                   //                                .readdata
-		.GPIO_s1_writedata                     (mm_interconnect_0_gpio_s1_writedata),                  //                                .writedata
-		.GPIO_s1_chipselect                    (mm_interconnect_0_gpio_s1_chipselect),                 //                                .chipselect
 		.HOURS_s1_address                      (mm_interconnect_0_hours_s1_address),                   //                        HOURS_s1.address
 		.HOURS_s1_write                        (mm_interconnect_0_hours_s1_write),                     //                                .write
 		.HOURS_s1_readdata                     (mm_interconnect_0_hours_s1_readdata),                  //                                .readdata

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'CPU' in SOPC Builder design 'alarm'
  * SOPC Builder design path: ../../alarm.sopcinfo
  *
- * Generated: Wed Oct 16 23:18:48 CST 2019
+ * Generated: Thu Oct 17 04:46:56 CST 2019
  */
 
 /*
@@ -170,39 +170,12 @@
 
 
 /*
- * GPIO configuration
- *
- */
-
-#define ALT_MODULE_CLASS_GPIO altera_avalon_pio
-#define GPIO_BASE 0x49080
-#define GPIO_BIT_CLEARING_EDGE_REGISTER 0
-#define GPIO_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define GPIO_CAPTURE 0
-#define GPIO_DATA_WIDTH 1
-#define GPIO_DO_TEST_BENCH_WIRING 0
-#define GPIO_DRIVEN_SIM_VALUE 0
-#define GPIO_EDGE_TYPE "NONE"
-#define GPIO_FREQ 50000000
-#define GPIO_HAS_IN 0
-#define GPIO_HAS_OUT 1
-#define GPIO_HAS_TRI 0
-#define GPIO_IRQ -1
-#define GPIO_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define GPIO_IRQ_TYPE "NONE"
-#define GPIO_NAME "/dev/GPIO"
-#define GPIO_RESET_VALUE 0
-#define GPIO_SPAN 16
-#define GPIO_TYPE "altera_avalon_pio"
-
-
-/*
  * HOURS configuration
  *
  */
 
 #define ALT_MODULE_CLASS_HOURS altera_avalon_pio
-#define HOURS_BASE 0x49050
+#define HOURS_BASE 0x49060
 #define HOURS_BIT_CLEARING_EDGE_REGISTER 0
 #define HOURS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HOURS_CAPTURE 0
@@ -274,7 +247,7 @@
  */
 
 #define ALT_MODULE_CLASS_MINUTES altera_avalon_pio
-#define MINUTES_BASE 0x49060
+#define MINUTES_BASE 0x49070
 #define MINUTES_BIT_CLEARING_EDGE_REGISTER 0
 #define MINUTES_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define MINUTES_CAPTURE 0
@@ -359,7 +332,7 @@
  */
 
 #define ALT_MODULE_CLASS_SECONDS altera_avalon_pio
-#define SECONDS_BASE 0x49070
+#define SECONDS_BASE 0x49080
 #define SECONDS_BIT_CLEARING_EDGE_REGISTER 0
 #define SECONDS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SECONDS_CAPTURE 0
@@ -386,7 +359,7 @@
  */
 
 #define ALT_MODULE_CLASS_SWITCHES altera_avalon_pio
-#define SWITCHES_BASE 0x49040
+#define SWITCHES_BASE 0x49050
 #define SWITCHES_BIT_CLEARING_EDGE_REGISTER 0
 #define SWITCHES_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SWITCHES_CAPTURE 0
@@ -419,7 +392,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/SysID"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1571282238
+#define SYSID_TIMESTAMP 1571307407
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -497,6 +470,33 @@
 #define UART_NAME "/dev/UART"
 #define UART_SPAN 8
 #define UART_TYPE "altera_up_avalon_rs232"
+
+
+/*
+ * alarm configuration
+ *
+ */
+
+#define ALARM_BASE 0x49040
+#define ALARM_BIT_CLEARING_EDGE_REGISTER 0
+#define ALARM_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define ALARM_CAPTURE 0
+#define ALARM_DATA_WIDTH 1
+#define ALARM_DO_TEST_BENCH_WIRING 0
+#define ALARM_DRIVEN_SIM_VALUE 0
+#define ALARM_EDGE_TYPE "NONE"
+#define ALARM_FREQ 50000000
+#define ALARM_HAS_IN 0
+#define ALARM_HAS_OUT 1
+#define ALARM_HAS_TRI 0
+#define ALARM_IRQ -1
+#define ALARM_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define ALARM_IRQ_TYPE "NONE"
+#define ALARM_NAME "/dev/alarm"
+#define ALARM_RESET_VALUE 0
+#define ALARM_SPAN 16
+#define ALARM_TYPE "altera_avalon_pio"
+#define ALT_MODULE_CLASS_alarm altera_avalon_pio
 
 
 /*

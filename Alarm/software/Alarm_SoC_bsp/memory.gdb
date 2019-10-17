@@ -3,7 +3,7 @@
 # Machine generated for CPU 'CPU' in SOPC Builder design 'alarm'
 # SOPC Builder design path: ../../alarm.sopcinfo
 #
-# Generated: Wed Oct 16 23:18:48 CST 2019
+# Generated: Thu Oct 17 04:46:56 CST 2019
 
 # DO NOT MODIFY THIS FILE
 #

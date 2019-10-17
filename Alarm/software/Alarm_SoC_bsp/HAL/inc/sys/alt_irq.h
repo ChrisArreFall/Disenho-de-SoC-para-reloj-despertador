@@ -211,12 +211,12 @@ int alt_ic_irq_disable(alt_u32 ic_id, alt_u32 irq);
  */        
 alt_u32 alt_ic_irq_enabled(alt_u32 ic_id, alt_u32 irq);
 
-#else
+#else 
 /*
  * Prototypes for the legacy interrupt API.
  */
 #include "priv/alt_legacy_irq.h"
-#endif
+#endif 
 
 
 /*

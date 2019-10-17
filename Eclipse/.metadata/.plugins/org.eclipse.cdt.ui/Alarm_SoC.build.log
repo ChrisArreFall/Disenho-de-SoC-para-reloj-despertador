@@ -1,9 +1,9 @@
-03:41:14 **** Incremental Build of configuration Nios II for project Alarm_SoC ****
+05:08:44 **** Incremental Build of configuration Nios II for project Alarm_SoC ****
 make all 
 Info: Building ../Alarm_SoC_bsp/
 make --no-print-directory -C ../Alarm_SoC_bsp/
 [BSP build complete]
 [Alarm_SoC build complete]
 
-03:41:14 Build Finished (took 588ms)
+05:08:45 Build Finished (took 582ms)
 

@@ -248,11 +248,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "switches_export[0]",
+					"name" : "buttons_export[0]",
 					"strict" : false
 				},
 				{
-					"name" : "buttons_export[0]",
+					"name" : "switches_export[0]",
 					"strict" : false
 				},
 				{

@@ -1,9 +1,10 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
 preplace inst alarm.TimerCore -pg 1 -lvl 3 -y 690
+preplace inst alarm.SWITCHES -pg 1 -lvl 3 -y 790
 preplace inst alarm -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst alarm.MINUTES -pg 1 -lvl 3 -y 910
-preplace inst alarm.LEDs -pg 1 -lvl 3 -y 810
+preplace inst alarm.MINUTES -pg 1 -lvl 3 -y 990
+preplace inst alarm.LEDs -pg 1 -lvl 3 -y 890
 preplace inst alarm.CPU.cpu -pg 1
 preplace inst alarm.GPIO -pg 1 -lvl 3 -y 30
 preplace inst alarm.CLK -pg 1 -lvl 1 -y 580
@@ -14,22 +15,23 @@ preplace inst alarm.CPU.clock_bridge -pg 1
 preplace inst alarm.UART -pg 1 -lvl 3 -y 470
 preplace inst alarm.JTAG -pg 1 -lvl 3 -y 590
 preplace inst alarm.SysID -pg 1 -lvl 3 -y 390
-preplace inst alarm.SECONDS -pg 1 -lvl 3 -y 1010
-preplace inst alarm.HOURS -pg 1 -lvl 3 -y 1110
+preplace inst alarm.SECONDS -pg 1 -lvl 3 -y 1090
+preplace inst alarm.HOURS -pg 1 -lvl 3 -y 1190
 preplace inst alarm.CPU.reset_bridge -pg 1
 preplace inst alarm.BUTTONS -pg 1 -lvl 3 -y 130
-preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.minutes,(SLAVE)MINUTES.external_connection) 1 0 3 NJ 940 NJ 940 NJ
-preplace netloc INTERCONNECT<net_container>alarm</net_container>(MASTER)CPU.data_master,(SLAVE)UART.avalon_rs232_slave,(SLAVE)BUTTONS.s1,(SLAVE)SysID.control_slave,(SLAVE)CPU.debug_mem_slave,(SLAVE)MINUTES.s1,(SLAVE)LEDs.s1,(SLAVE)SECONDS.s1,(SLAVE)JTAG.avalon_jtag_slave,(MASTER)CPU.instruction_master,(SLAVE)RAM.s1,(SLAVE)TimerCore.s1,(SLAVE)GPIO.s1,(SLAVE)ROM.s1,(SLAVE)HOURS.s1) 1 1 2 310 1160 710
+preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.alarm,(SLAVE)GPIO.external_connection) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.minutes,(SLAVE)MINUTES.external_connection) 1 0 3 NJ 1020 NJ 1020 NJ
+preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.seconds,(SLAVE)SECONDS.external_connection) 1 0 3 NJ 1120 NJ 1120 NJ
 preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)CLK.clk_in,(SLAVE)alarm.clk) 1 0 1 NJ
-preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.reset,(SLAVE)CLK.clk_in_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.hours,(SLAVE)HOURS.external_connection) 1 0 3 NJ 1140 NJ 1140 NJ
-preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)SECONDS.external_connection,(SLAVE)alarm.seconds) 1 0 3 NJ 1040 NJ 1040 NJ
-preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)BUTTONS.external_connection,(SLAVE)alarm.buttons) 1 0 3 NJ 160 NJ 160 NJ
-preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)GPIO.external_connection,(SLAVE)alarm.alarm) 1 0 3 NJ 60 NJ 60 NJ
-preplace netloc INTERCONNECT<net_container>alarm</net_container>(SLAVE)SysID.reset,(SLAVE)CPU.reset,(SLAVE)RAM.reset1,(SLAVE)TimerCore.reset,(SLAVE)SECONDS.reset,(SLAVE)UART.reset,(MASTER)CLK.clk_reset,(SLAVE)HOURS.reset,(SLAVE)BUTTONS.reset,(SLAVE)LEDs.reset,(SLAVE)JTAG.reset,(MASTER)CPU.debug_reset_request,(SLAVE)ROM.reset1,(SLAVE)GPIO.reset,(SLAVE)MINUTES.reset) 1 1 2 290 520 670
-preplace netloc FAN_OUT<net_container>alarm</net_container>(SLAVE)UART.clk,(SLAVE)MINUTES.clk,(SLAVE)LEDs.clk,(MASTER)CLK.clk,(SLAVE)BUTTONS.clk,(SLAVE)TimerCore.clk,(SLAVE)ROM.clk1,(SLAVE)CPU.clk,(SLAVE)SECONDS.clk,(SLAVE)GPIO.clk,(SLAVE)HOURS.clk,(SLAVE)SysID.clk,(SLAVE)RAM.clk1,(SLAVE)JTAG.clk) 1 1 2 270 500 730
-preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.leds,(SLAVE)LEDs.external_connection) 1 0 3 NJ 840 NJ 840 NJ
-preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.uart,(SLAVE)UART.external_interface) 1 0 3 NJ 480 NJ 480 NJ
-preplace netloc FAN_OUT<net_container>alarm</net_container>(SLAVE)JTAG.irq,(SLAVE)UART.interrupt,(MASTER)CPU.irq,(SLAVE)TimerCore.irq) 1 2 1 750
+preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.hours,(SLAVE)HOURS.external_connection) 1 0 3 NJ 1220 NJ 1220 NJ
+preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.buttons,(SLAVE)BUTTONS.external_connection) 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc FAN_OUT<net_container>alarm</net_container>(MASTER)CPU.irq,(SLAVE)UART.interrupt,(SLAVE)TimerCore.irq,(SLAVE)JTAG.irq) 1 2 1 730
+preplace netloc INTERCONNECT<net_container>alarm</net_container>(SLAVE)BUTTONS.s1,(SLAVE)CPU.debug_mem_slave,(SLAVE)MINUTES.s1,(SLAVE)SysID.control_slave,(SLAVE)TimerCore.s1,(MASTER)CPU.data_master,(SLAVE)ROM.s1,(SLAVE)JTAG.avalon_jtag_slave,(SLAVE)RAM.s1,(SLAVE)HOURS.s1,(SLAVE)LEDs.s1,(SLAVE)SECONDS.s1,(MASTER)CPU.instruction_master,(SLAVE)SWITCHES.s1,(SLAVE)UART.avalon_rs232_slave,(SLAVE)GPIO.s1) 1 1 2 310 500 710
+preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.leds,(SLAVE)LEDs.external_connection) 1 0 3 NJ 920 NJ 920 NJ
+preplace netloc FAN_OUT<net_container>alarm</net_container>(SLAVE)BUTTONS.clk,(SLAVE)MINUTES.clk,(MASTER)CLK.clk,(SLAVE)SWITCHES.clk,(SLAVE)CPU.clk,(SLAVE)RAM.clk1,(SLAVE)LEDs.clk,(SLAVE)TimerCore.clk,(SLAVE)SysID.clk,(SLAVE)JTAG.clk,(SLAVE)HOURS.clk,(SLAVE)SECONDS.clk,(SLAVE)UART.clk,(SLAVE)GPIO.clk,(SLAVE)ROM.clk1) 1 1 2 270 480 690
+preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.uart,(SLAVE)UART.external_interface) 1 0 3 NJ 460 NJ 460 NJ
+preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)alarm.switches,(SLAVE)SWITCHES.external_connection) 1 0 3 NJ 820 NJ 820 NJ
+preplace netloc EXPORT<net_container>alarm</net_container>(SLAVE)CLK.clk_in_reset,(SLAVE)alarm.reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>alarm</net_container>(SLAVE)MINUTES.reset,(MASTER)CLK.clk_reset,(SLAVE)TimerCore.reset,(SLAVE)UART.reset,(SLAVE)RAM.reset1,(SLAVE)HOURS.reset,(MASTER)CPU.debug_reset_request,(SLAVE)CPU.reset,(SLAVE)BUTTONS.reset,(SLAVE)ROM.reset1,(SLAVE)JTAG.reset,(SLAVE)GPIO.reset,(SLAVE)SWITCHES.reset,(SLAVE)SECONDS.reset,(SLAVE)LEDs.reset,(SLAVE)SysID.reset) 1 1 2 290 520 670
 levelinfo -pg 1 0 60 940
 levelinfo -hier alarm 70 100 430 780 930
